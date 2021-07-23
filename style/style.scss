@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+/*font-family: 'Kumbh Sans', sans-serif;*/
+@import "./variables";
+
+
+
+
+*, body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0; 
+}
+
+
+body, html{
+    height: 100%;
+    background: linear-gradient(to bottom, $soft-violet, $soft-blue);
+    background-repeat: no-repeat;
+    font-size:12px;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body{
+    padding: 8rem 2rem;
+}
+
+h1{
+    font-weight: 700;
+    color: $dark-desaturated-blue;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+h4{
+    font-weight: 400;
+    color: $darker-grayish-blue;
+}
+p{
+    color: $dark-grayish-blue;
+    margin: 10px 20px 10px 0px;
+    display: none;
+}
+
+.svg-woman{
+    display: none;
+}
+.svg-box{
+    display: none;
+}
+
+
+.card{
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-image{
+    position: relative;
+    background: url(/images/bg-pattern-mobile.svg) center top no-repeat;
+    min-height: 120px;
+}
+
+.faq-content{
+    font-size: 0.9em;
+    min-height:300px;
+    padding: 5px 10px;
+    line-height: 1.5em;
+    text-align: justify;
+    font-size: 0.9em;
+    h1{
+        font-size: 2rem;
+    }
+    h4{
+        font-size: 1.2em;
+    }
+    h4:hover{
+        color: $soft-red;
+    }
+}
+
+.featheader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.feature{
+    border-bottom: solid 1px $grayish-blue-divider;
+}
+
+
+
+.svg-woman-mobile{
+    position: absolute;
+    left: 0; 
+    right: 30px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 250px;
+    top: -95px;
+}
+.pgph{
+    display: block;
+}
+
+@media screen and (max-width: 1100px){
+    body {
+        height: auto;
+        min-height: 100%;
+        background-attachment: fixed;
+      }
+}
+
+@media (min-width:700px){
+    
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .card{
+        font-size: 1.1rem;
+        position: relative;
+        flex-direction: row;
+        width: 750px;
+        height: 400px;
+    }
+    .svg-box{
+        position: absolute;
+        display: block;
+        width: 115px;
+        left: -57px;
+        top: 140px;
+    }
+    .card-image{
+        background: url(/images/bg-pattern-desktop.svg) right 65px bottom -30px no-repeat;
+        background-size: 630px;
+        overflow: hidden;
+    }
+
+    .svg-woman-mobile{
+        display: none;
+    }
+    .svg-woman{
+        display: block;
+        transform: translate(-18%, 10%);
+        width: min(350px, 900px);
+    }
+    .card>*{
+        flex-basis: 100%;
+    }
+    .faq-content{
+        margin-top: 30px;
+        padding-right: 80px;
+    }
+    h1{
+        text-align: left;
+    }
+    
+}
